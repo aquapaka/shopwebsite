@@ -12,7 +12,7 @@
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2">
         <fmt:setLocale value="vi_VN" scope="session"/>    
         <c:forEach items="${products}" var="product">
-        <div class="col">
+        <div class="col d-flex align-items-stretch">
             <div class="card">
                 <a href="${pageContext.request.contextPath}/productInfo?id=${product.id}">
                     <img src="${product.img}" class="card-img-top" alt="${product.name}">

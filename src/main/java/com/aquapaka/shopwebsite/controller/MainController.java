@@ -79,4 +79,10 @@ public class MainController {
 
         return "productInfo";
     }
+
+    @GetMapping("/addProduct")
+    public String addProduct() {
+
+        return "addProduct";
+    }
 }

@@ -47,9 +47,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, int price, String description, String brand, String display, String os,
-            String cpu, String gpu, String ram, String storage, String battery) {
-        this.id = id;
+    public Product(String name, int price, String description, String brand, String display, String os,
+            String cpu, String gpu, String ram, String storage, String battery, String img) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -61,6 +60,7 @@ public class Product {
         this.ram = ram;
         this.storage = storage;
         this.battery = battery;
+        this.img = img;
     }
     
     public String getImg() {

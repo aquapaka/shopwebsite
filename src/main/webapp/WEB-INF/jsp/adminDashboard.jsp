@@ -9,9 +9,10 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-12">
             <h1>Admin dashboard</h1>
+            <i style="color: green">${adminMessage}</i>
             <ul>
-                <li><button class="btn btn-success btn-sm mb-2">Add new product</button></li>
-                <li><button class="btn btn-success btn-sm mb-2">Sort product</button></li>
+                <li><a href="${pageContext.request.contextPath}/addProduct"><button class="btn btn-success btn-sm mb-2">Add new product</button></a></li>
+                <%-- <li><button class="btn btn-success btn-sm mb-2">Sort product</button></li> --%>
             </ul>
         </div>
     </div>

@@ -49,6 +49,7 @@
                             <td><b><fmt:formatNumber value="${userOrder.totalPrice}" type="currency"/></b></td>
                         </tr>
                     </table>
+                    <hr>
                 </div>
             </c:forEach>
         </main>

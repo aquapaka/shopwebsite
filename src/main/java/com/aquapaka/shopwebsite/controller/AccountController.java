@@ -21,6 +21,12 @@ public class AccountController {
         this.accountService = accountService;
     }
 
+    /**
+     * This controller method is use to do login request
+     * @param model
+     * @param request
+     * @return
+     */
     @PostMapping("/login")
     public String login(Model model, HttpServletRequest request) {
 
@@ -53,6 +59,13 @@ public class AccountController {
         return "login";
     }
 
+    /**
+     * This controller method is used to do register request,
+     * get and validate register datas and then create new account
+     * @param model
+     * @param request
+     * @return
+     */
     @PostMapping("/register")
     public String registerNewAccount(Model model, HttpServletRequest request) {
 
@@ -63,6 +76,7 @@ public class AccountController {
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
 
+        // Regex used to validate
         String emailRegex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         String phoneRegex = "^[0][0-9]{9}$";
 
@@ -82,9 +96,9 @@ public class AccountController {
         } else {
             // Try to add new account
             Account account = new Account(email, password, 0, name, address, phone);
-
             boolean isSuccess = accountService.addNewAccount(account);
 
+            // Check if account added or not
             if (!isSuccess) {
                 message = "Email already exist";
             } else {
@@ -95,7 +109,9 @@ public class AccountController {
             }
         }
 
+        // If data not valid, return register page with error message
         model.addAttribute("message", message);
+
         return "register";
     }
 

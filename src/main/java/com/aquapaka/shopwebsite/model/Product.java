@@ -22,13 +22,13 @@ public class Product {
 
     @Id
     @SequenceGenerator(
-        name = "account_sequence",
-        sequenceName = "account_sequence",
+        name = "product_sequence",
+        sequenceName = "product_sequence",
         allocationSize = 1
     )
     @GeneratedValue(
         strategy = GenerationType.SEQUENCE,
-        generator = "account_sequence"
+        generator = "product_sequence"
     )
     private Long id;
     private String name;

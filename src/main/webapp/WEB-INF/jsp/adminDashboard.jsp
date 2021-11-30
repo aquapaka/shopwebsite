@@ -12,7 +12,7 @@
             <i style="color: green">${adminMessage}</i>
             <ul>
                 <li><a href="${pageContext.request.contextPath}/addProduct"><button class="btn btn-success btn-sm mb-2">Add new product</button></a></li>
-                <%-- <li><button class="btn btn-success btn-sm mb-2">Sort product</button></li> --%>
+                <li><a href="${pageContext.request.contextPath}/viewOrders"><button class="btn btn-success btn-sm mb-2">View orders</button></a></li>
             </ul>
         </div>
     </div>

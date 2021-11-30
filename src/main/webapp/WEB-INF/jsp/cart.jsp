@@ -22,7 +22,7 @@
                         <b>${product.name}</b><br>
                         <span><fmt:formatNumber value="${product.price}" type="currency"/></span>
                     </div> 
-                </a>     
+                </a>
                 <form action="${pageContext.request.contextPath}/cartRemove?index=${status.index}" method="post">
                     <button type="submit" class="btn btn-danger btn-sm">Remove</button>
                 </form>
@@ -33,8 +33,8 @@
             <div>
                 <span>Total: </span><b><fmt:formatNumber value="${not empty cart.totalPrice() ? cart.totalPrice() : '0'}" type="currency"/></b>
             </div>
-            <button class="btn btn-success btn-sm ">Purchase</button>
-        </div>
+            <a href="${pageContext.request.contextPath}/order"><button class="btn btn-success btn-sm" ${empty cart || cart.getProducts().isEmpty() ? 'hidden' : ''}>Order</button></a>
+        </div>       
     </ol>
 </div>
 

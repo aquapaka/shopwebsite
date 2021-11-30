@@ -85,4 +85,10 @@ public class MainController {
 
         return "addProduct";
     }
+
+    @GetMapping("/order")
+    public String order() {
+
+        return "order";
+    }
 }
